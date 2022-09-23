@@ -8,9 +8,6 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 router.get("/", ensureAuth, createController.getCreate);
 
-//router.get("/:id", ensureAuth, createController.getCreate);
-
-
 router.post("/createCharacter", upload.single("file"), createController.createCharacter);
 
 //router.delete("/deletePost/:id", createController.deleteCharacter);

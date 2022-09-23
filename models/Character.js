@@ -1,9 +1,36 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true,
+  },
+  background: {
+    type: String,
+    required: true,
+  },
+  class: {
+    type: String,
+    required: true,
+  },
+  race: {
+    type: String,
+    required: true,
+  },
+  level: {
+    type: Number,
+    required: true,
+    default: 1,
+  },
+  health: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  experience: {
+    type: Number,
+    required: true,
+    default: 0,
   },
   image: {
     type: String,
@@ -12,14 +39,6 @@ const PostSchema = new mongoose.Schema({
   cloudinaryId: {
     type: String,
     require: true,
-  },
-  caption: {
-    type: String,
-    required: true,
-  },
-  likes: {
-    type: Number,
-    required: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
