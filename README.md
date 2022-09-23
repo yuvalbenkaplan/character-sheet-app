@@ -6,12 +6,11 @@
 
 # Things to add
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
+  - Character creation forms
+  - Character selection carousel
+  - Character delete button
+  - 
+  - 
 
 ---
 
@@ -21,10 +20,13 @@
 
 # Functionality to add
 
-- Character select / create page
+- Character creation
+- Character deletion
+- Character selection
 - Google oAuth
 
 # Functionality completed
 - Basic login and authentication with Passport
-- 
+- Character select page
+- Character create page
 

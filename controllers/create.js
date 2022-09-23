@@ -2,34 +2,18 @@ const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Character");
 
 module.exports = {
-  getCreate: (req, res) => {
-    res.render("create.ejs");
-  },
+    getCreate: (req, res) => {
+        res.render("create.ejs");
+      },
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
-      res.render("select.ejs", { posts: posts, user: req.user });
+      res.render("create.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
     }
   },
-  getFeed: async (req, res) => {
-    try {
-      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("select.ejs", { posts: posts });
-    } catch (err) {
-      console.log(err);
-    }
-  },
-  getPost: async (req, res) => {
-    try {
-      const post = await Post.findById(req.params.id);
-      res.render("post.ejs", { post: post, user: req.user });
-    } catch (err) {
-      console.log(err);
-    }
-  },
-  createPost: async (req, res) => {
+  createCharacter: async (req, res) => {
     try {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
@@ -42,22 +26,8 @@ module.exports = {
         likes: 0,
         user: req.user.id,
       });
-      console.log("Post has been added!");
-      res.redirect("/profile");
-    } catch (err) {
-      console.log(err);
-    }
-  },
-  likePost: async (req, res) => {
-    try {
-      await Post.findOneAndUpdate(
-        { _id: req.params.id },
-        {
-          $inc: { likes: 1 },
-        }
-      );
-      console.log("Likes +1");
-      res.redirect(`/post/${req.params.id}`);
+      console.log("Character has been added!");
+      res.redirect("/select");
     } catch (err) {
       console.log(err);
     }
