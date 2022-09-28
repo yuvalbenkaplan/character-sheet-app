@@ -16,6 +16,7 @@
     <label for="name">Name (1 to 12 characters):</label>
     <input type="text" id="name" name="name" required
        minlength="1" maxlength="12" size="10">
+       
     <!-- race selection form -->
     <label for="race-select">Choose a race:</label>
         <select name="races" id="race-select">
@@ -23,6 +24,7 @@
         <option value="human">Human</option>
         </select>
     </div>
+
     <div class="creation">
     <!-- race selection form -->
     <label for="background-select">Choose a background:</label>
@@ -31,8 +33,6 @@
         <option value="outlander">Outlander</option>
         </select>
     
-    
-    
     <!-- class selection form -->
     <label for="class-select">Choose a class:</label>
         <select name="classes" id="class-select">
@@ -40,13 +40,10 @@
         <option value="barbarian">Barbarian</option>
         </select>
     </div>
-    <!-- attribute selection form -->
-    <!-- <label for="attribute-select">Choose your attributes:</label>
-        <select name="attributes" id="attribute-select">
-        <option value="">--Please choose your attributes--</option>
-        <option value="barbarian">Barbarian</option>
-        </select> -->
+
         </div>
         <a href="/skills" class="col-3 btn btn-primary">Continue creation</a>
+        <a href="/profile" class="col-3 btn btn-primary">Back to profile</a>
+        <a href="/logout" class="col-3 btn btn-primary">Logout</a>
 </body>
 </html>

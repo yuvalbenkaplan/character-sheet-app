@@ -4,19 +4,19 @@
 
 ---
 
-# Things to add
-
-  - Character creation forms
-  - Character selection carousel
-  - Character delete button
-  - 
-  - 
-
----
-
 # Run
 
 `npm start`
+
+---
+
+# Structure to add
+
+  - Skills and attributes for character creation
+  - Character selection carousel
+  - Character delete button
+  - Character sheet
+  - 
 
 # Functionality to add
 
@@ -25,8 +25,15 @@
 - Character selection
 - Google oAuth
 
-# Functionality completed
-- Basic login and authentication with Passport
+# Structure added
+- Login page
+- Signup page
 - Character select page
 - Character create page
+- Some character creation forms
+
+# Functionality completed
+- Basic login and authentication with Passport
+- Navigating to character selection / creation
+- 
 
