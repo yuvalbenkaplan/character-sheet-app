@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/auth.css">
+	<link rel="stylesheet" type="text/css" href="css/create.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Character creation</h1>
+    <div class="main">
+    <div class="creation">
     
+    <!-- race selection form -->
+    <label for="name">Name (1 to 12 characters):</label>
+    <input type="text" id="name" name="name" required
+       minlength="1" maxlength="12" size="10">
+    <!-- race selection form -->
+    <label for="race-select">Choose a race:</label>
+        <select name="races" id="race-select">
+        <option value="">--Please choose a race--</option>
+        <option value="human">Human</option>
+        </select>
+    </div>
+    <div class="creation">
+    <!-- race selection form -->
+    <label for="background-select">Choose a background:</label>
+        <select name="backgrounds" id="background-select">
+        <option value="">--Please choose a background--</option>
+        <option value="outlander">Outlander</option>
+        </select>
+    
+    
+    
+    <!-- class selection form -->
+    <label for="class-select">Choose a class:</label>
+        <select name="classes" id="class-select">
+        <option value="">--Please choose a class--</option>
+        <option value="barbarian">Barbarian</option>
+        </select>
+    </div>
+    <!-- attribute selection form -->
+    <!-- <label for="attribute-select">Choose your attributes:</label>
+        <select name="attributes" id="attribute-select">
+        <option value="">--Please choose your attributes--</option>
+        <option value="barbarian">Barbarian</option>
+        </select> -->
+        </div>
+        <a href="/skills" class="col-3 btn btn-primary">Continue creation</a>
 </body>
 </html>

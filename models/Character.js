@@ -56,14 +56,14 @@ const PostSchema = new mongoose.Schema({
     required: true,
     default: 0,
   },
-  image: {
-    type: String,
-    require: true,
-  },
-  cloudinaryId: {
-    type: String,
-    require: true,
-  },
+  // image: {
+  //   type: String,
+  //   require: true,
+  // },
+  // cloudinaryId: {
+  //   type: String,
+  //   require: true,
+  // },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

@@ -1,5 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
-const Post = require("../models/Character");
+const Character = require("../models/Character");
 
 module.exports = {
     getCreate: (req, res) => {
@@ -7,8 +7,8 @@ module.exports = {
       },
   getProfile: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
-      res.render("create.ejs", { posts: posts, user: req.user });
+      const characters = await Character.find({ user: req.user.id });
+      res.render("create.ejs", { characters: characters, user: req.user });
     } catch (err) {
       console.log(err);
     }

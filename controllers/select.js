@@ -1,5 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
-const Post = require("../models/Character");
+const Character = require("../models/Character");
 
 module.exports = {
   getCreate: (req, res) => {
